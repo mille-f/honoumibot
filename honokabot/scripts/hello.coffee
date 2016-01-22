@@ -6,6 +6,9 @@
 
 module.exports = (robot) ->
   robot.hear /おはよう/i, (msg) ->
-    msg.send "おっはよー！"
+    if msg.message.user.name == "mille"
+      msg.send "おっはよー！"
   robot.hear /おやすみ/i, (msg) ->
-    msg.send "おやすみー"
+    if msg.message.user.name == "mille"
+      msg.send "おやすみー"
+
